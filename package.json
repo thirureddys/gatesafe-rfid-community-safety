@@ -1,0 +1,14 @@
+{
+  "name": "gatesafe-rfid-community-safety-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "npm --prefix gatesafe-rfid-community-safety install",
+    "dev": "npm --prefix gatesafe-rfid-community-safety run dev",
+    "build": "npm --prefix gatesafe-rfid-community-safety run build",
+    "start": "npm --prefix gatesafe-rfid-community-safety start",
+    "typecheck": "npm --prefix gatesafe-rfid-community-safety run typecheck",
+    "test": "npm --prefix gatesafe-rfid-community-safety test",
+    "demo:test": "npm --prefix gatesafe-rfid-community-safety run demo:test"
+  }
+}
