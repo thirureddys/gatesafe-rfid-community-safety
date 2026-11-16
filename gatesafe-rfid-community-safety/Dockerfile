@@ -16,4 +16,4 @@ COPY --from=builder /app/server.ts ./server.ts
 COPY --from=builder /app/src/types.ts ./src/types.ts
 COPY --from=builder /app/tsconfig.json ./tsconfig.json
 EXPOSE 8080
-CMD ["npx", "tsx", "server.ts"]
+CMD ["npm", "start"]
