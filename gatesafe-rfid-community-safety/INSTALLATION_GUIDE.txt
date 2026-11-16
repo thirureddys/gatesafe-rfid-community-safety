@@ -1,0 +1,44 @@
+# GateSafe Installation & Operation Guide
+
+## Part 1: Deployment & Installation (For Admins/Builders)
+
+### Step 1: Hardware Preparation
+1. **Identify Zones:** Identify all 30 amenities or transit points where readers need to be installed (e.g., Pools, Gyms, Entry/Exit Gates).
+2. **Device Hardware:** Procure RFID Readers (LF/HF/UHF depending on required range).
+3. **Power & Network:** Ensure each reader has a power source (PoE is recommended) and is connected to the community's local network (Wi-Fi/Ethernet).
+
+### Step 2: Server Configuration
+1. **Host the Gateway:** Deploy the GateSafe backend on a central server within the community or on a cloud instance (AWS/GCP).
+2. **Register Readers:** Use the Admin Panel to map the physical ID of each RFID reader to a specific amenity name (e.g., `Reader_ID_882` -> `Swimming Pool`).
+3. **Set Security Intervals:** Configure the "Inactivity Limit" (Default is 20 minutes) for automated alerts.
+
+### Step 3: Tag Distribution
+1. **Register Tags:** Link each RFID tag ID to a specific person or asset (e.g., `Tag_T-501` -> "Master Bedroom TV" or "Ananya Reddy").
+2. **Parent Access:** Provision parent accounts using their flat number and mobile number to grant them access to the "Parent App View".
+
+---
+
+## Part 2: How to Use the Software (From Scratch)
+
+### 1. Accessing the Dashboard
+* **Admin Login:** Open the GateSafe application on a desktop browser.
+* **Side Navigation:**
+  * **Live Monitoring:** Real-time table of all residents and assets.
+  * **Business Case:** Review the investment and scaling analytics.
+  * **Parent App View:** A simulated view of what the mobile app looks like for residents.
+
+### 2. Monitoring Movement
+* Navigate to **"Live Monitoring"**.
+* Use the **"Tabs (All / Kids / Assets)"** to filter what you are tracking.
+* Look for the **"Secure"** status. If a resident has been stationary for too long, a red pulse alert will appear next to their status.
+
+### 3. Handling Alerts
+* The **"Movement Feed"** on the right side of the dashboard shows every entry and exit.
+* **Theft Detection:** If a society asset (like gym equipment) enters the **"Main Gate"** zone, the status will flash **"Unauthorized Movement"** and trigger an alarm.
+
+### 4. Simulating Events (For Testing)
+If you do not have physical hardware connected yet:
+1. Click the **"Hardware Sim"** button at the bottom left.
+2. Select a **"Tag"** and a **"Zone"**.
+3. Click **"Trigger Entry"**.
+4. Observe the Dashboard and Parent View update immediately with the new location and activity time.
